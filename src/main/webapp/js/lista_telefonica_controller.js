@@ -17,7 +17,6 @@ function crudLista($scope,$http){
 
 	$scope.adicionar = function(contato){
 		if (!$scope.alterando) {
-			debugger;
 			$http.post('http://localhost:8080/lista', contato)
 				.then(function successCallback(contato) {
 					console.log(contato);
@@ -44,7 +43,6 @@ function crudLista($scope,$http){
 	}
 	
 	$scope.deletar = function(index){
-		debugger;
 		$http.delete('http://localhost:8080/lista', index)
 		.then(function sucessCallback(contato){
 			console.log(contato)
